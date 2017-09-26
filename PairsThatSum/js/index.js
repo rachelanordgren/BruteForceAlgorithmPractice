@@ -4,7 +4,7 @@
  */
 var pairsThatSum = (array,v) => {
 	// TODO
-	return [[40,2],[50,-8]];
+	return [];
 }
 
 /*
