@@ -163,31 +163,6 @@ $(document).ready(function(){
 			interest: 8,
 			estimatedChatTime: 18
 		},
-		{
-			name: 'V',
-			interest: 7,
-			estimatedChatTime: 13
-		},
-		{
-			name: 'W',
-			interest: 4,
-			estimatedChatTime: 6
-		},
-		{
-			name: 'X',
-			interest: 9,
-			estimatedChatTime: 10
-		},
-		{
-			name: 'Y',
-			interest: 7,
-			estimatedChatTime: 19
-		},
-		{
-			name: 'Z',
-			interest: 8,
-			estimatedChatTime: 8
-		},
 	];
 	
 	var optimalSubset = careerFairPlanner(companies, 120)
