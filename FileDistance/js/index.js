@@ -42,8 +42,11 @@ var displayResults = (m) => {
 $(document).ready(function(){
 	// chose one of the text and searchWords pairs below.
 
-	text = `Wit beyond measure is man's greatest treasure.`
-	searchWords = ['measure','treasure']
+	text = `The itsy bitsy spider climbed up the waterspout. 
+			Down came the rain and washed the spider out. 
+			Out came the sun and dried up all the rain 
+			and the itsy bitsy spider climbed up the spout again.`
+	searchWords = ['spider','rain']
 
 	//text = prideandprejudice;
 	//searchWords = ['visit','happiness'];
