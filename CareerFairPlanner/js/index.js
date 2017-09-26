@@ -3,7 +3,7 @@
  * counting method and returns them in an array.
  */
 var generateAllSubsets = (S) => {
-	subsets = [];
+	subsets = new Set();
 	// TODO
 	return subsets;
 }
@@ -21,11 +21,20 @@ var careerFairPlanner = (companies, availableTime) => {
 
 /*
  * this function accepts an integer i and returns the binary representation of i
- * in an array of bits (either 0 or 1)
+ * in an array of n bits (e.g. getBitArray(1,5) would return [0,0,0,0,1])
  */
-var getBitArray = (i) => {
+var getBitArray = (i,n) => {
 	var base2 = (i).toString(2);
 	base2 = base2.split('');
+	
+	for (i=0;i<base2.length;i++){
+		base2[i] = parseInt(base2[i]);
+	}
+	
+	while (base2.length<n){
+		base2.unshift(0);
+	}
+	
 	return base2;
 }
 
