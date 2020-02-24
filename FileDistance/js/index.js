@@ -22,8 +22,29 @@ var tokenize = (text) => {
  */
 var minDistance = (text,searchWords) => {
 	words = tokenize(text);
-	// TODO
-	return undefined;
+	console.log(words)
+	if (searchWords[0] === searchWords[1]) {
+		return 0;
+	} 
+		
+	let minimum = (words.length) + 1; 
+	let i;
+	let j;
+	for(i = 0; i < words.length; i++) {
+		if (words[i] === searchWords[0]) {
+			for (j = 0; j < words.length; j++) {
+				if(words[j] === searchWords[1]) {
+					let curr = Math.abs(i - j) - 1
+					if (curr < minimum) {
+						minimum = curr;
+					}
+				}
+			}
+		}
+	}
+
+	
+	return minimum;
 }
 
 
@@ -42,14 +63,14 @@ var displayResults = (m) => {
 $(document).ready(function(){
 	// chose one of the text and searchWords pairs below.
 
-	text = `The itsy bitsy spider climbed up the waterspout. 
-			Down came the rain and washed the spider out. 
-			Out came the sun and dried up all the rain 
-			and the itsy bitsy spider climbed up the spout again.`
-	searchWords = ['spider','rain']
+	// text = `The itsy bitsy spider climbed up the waterspout. 
+	// 		Down came the rain and washed the spider out. 
+	// 		Out came the sun and dried up all the rain 
+	// 		and the itsy bitsy spider climbed up the spout again.`
+	// searchWords = ['spider','rain']
 
-	//text = prideandprejudice;
-	//searchWords = ['visit','happiness'];
+	text = prideandprejudice;
+	searchWords = ['visit','happiness'];
 
 	//text = peterpan;
 	//searchWords = ['fairy','hook']

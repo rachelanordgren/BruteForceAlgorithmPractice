@@ -3,8 +3,18 @@
  * sum to a specific value v.
  */
 var pairsThatSum = (array,v) => {
-	// TODO
-	return [];
+	let i;
+	let j;
+	let pairs = [];
+	for (i = 0; i < array.length; i++) {
+		for (j = i + 1; j < array.length; j++) {
+			if (array[i] + array[j] === v) {
+				let pair = [array[i], array[j]];
+				pairs.push(pair);
+			}
+		}
+	}
+	return pairs;
 }
 
 /*
