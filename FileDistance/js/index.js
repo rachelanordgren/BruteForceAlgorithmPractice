@@ -22,7 +22,6 @@ var tokenize = (text) => {
  */
 var minDistance = (text,searchWords) => {
 	words = tokenize(text);
-	console.log(words)
 	if (searchWords[0] === searchWords[1]) {
 		return 0;
 	} 
@@ -69,11 +68,11 @@ $(document).ready(function(){
 	// 		and the itsy bitsy spider climbed up the spout again.`
 	// searchWords = ['spider','rain']
 
-	//text = prideandprejudice;
-	//searchWords = ['visit','happiness'];
+	text = prideandprejudice;
+	searchWords = ['visit','happiness'];
 
-	text = peterpan;
-	searchWords = ['fairy','hook']
+	//text = peterpan;
+	//searchWords = ['fairy','hook']
 
 	//text = dracula;
 	//searchWords = ['drink','blood']
